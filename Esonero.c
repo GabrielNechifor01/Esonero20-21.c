@@ -15,14 +15,9 @@ void InserisciK()
 {
 //LETTURA STRINGA INPUT
   printf("Inserire chiave K che non superi il testo precedente: \n");
-  //fgets(testo_K,128,stdin);
-  do{
-    //printf("Inserire chiave K che non superi il testo precedente: \n");
-    fgets(testo_K,128,stdin);
-    (so = getchar() != '\0');
-  }
-  while( strlen(testo_K) > strlen(testo_M) );
-
+  fgets(testo_K,128,stdin);
+  (so = getchar() != '\0');
+  
 }
   void GeneraK()
 {
