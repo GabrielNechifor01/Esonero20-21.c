@@ -6,7 +6,7 @@
 char testo_M[128];
 char testo_K[128];
 char testo_C[128];
-int so,i,j;
+int so,i;
 int menu_scelta;
 int lun_M,lun_K;
 
@@ -15,9 +15,8 @@ void InserisciK()
 {
 //LETTURA STRINGA INPUT
   printf("Inserire chiave K che non superi il testo precedente: \n");
-  fgets(testo_K,128,stdin);
+  scanf("%s",test_K);
   (so = getchar() != '\0');
-  
 }
   void GeneraK()
 {
@@ -57,8 +56,9 @@ switch(menu_scelta)
         InserisciK();
 //OPERAZIONE XOR(1)
         for (i=0; i<strlen(testo_M); ++i){
-          testo_C[i] = testo_M[i] ^ testo_K[i];
+          testo_C[i] = (char)(testo_M[i] ^ testo_K[i]);
         }
+        printf("\n");
         printf("Messaggio codificato:\n");
         printf("%s\n",testo_C);
 
@@ -76,6 +76,7 @@ case 2:
         for (i=0; i<strlen(testo_M); ++i){
           testo_C[i] = testo_M[i] ^ testo_K[i];
           }
+        printf("\n");
         printf("Messaggio codificato:\n");
         printf("%s\n",testo_C);
 
